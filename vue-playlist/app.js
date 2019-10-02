@@ -1,26 +1,28 @@
 //实例化vue对象
-new Vue({
-    el:"#vue-app",
+var one = new Vue({
+    el:"#vue-app-one",
     data:{
-        health:100,
-        ended:false
-
+       title:"app one 的内容"
     },
     methods:{
-        punch:function () {
-            this.health -=10;
 
-            if (this.health <=0 ){
-                this.ended=true;
-            }
-        },
-        restart:function () {
-            this.health =100;
-            this.ended=false;
-        }
     },
     computed:{
 
+    }
+});
+
+var two = new Vue({
+    el:"#vue-app-two",
+    data:{
+        title:"app two 的内容"
+    },
+    methods:{
+        changeTitle:function () {
+            one.title = "已经改名了！"
+        }
+    },
+    computed:{
 
     }
 });
