@@ -17,6 +17,12 @@ new Vue({
             // console.log(event);
             this.x=event.offsetX;
             this.y=event.offsetY;
+        },
+        stopMoving:function () {
+            event.stopPropagation()
+        },
+        aler:function () {
+            alert("Hello world!")
         }
     }
 });

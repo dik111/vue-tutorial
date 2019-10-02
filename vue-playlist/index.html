@@ -14,7 +14,11 @@
     <button v-on:dblclick="add(10)">涨十岁</button>
     <button v-on:dblclick="subtract(10)">减十岁</button>
     <p>My age is {{age}}</p>
-    <div id="canvas" v-on:mousemove="updateXY">{{x}},{{y}}</div>
+    <div id="canvas" v-on:mousemove="updateXY">{{x}},{{y}}
+    <span v-on:mousemove.stop="">Stop Moving
+    </span>
+    </div>
+    <a v-on:click.prevent="aler()" href="www.baidu.com">baidu</a>
 </div>
 <script src="app.js"></script>
 </body>
