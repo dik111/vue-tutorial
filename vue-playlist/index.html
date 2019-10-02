@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>Vue.js</title>
@@ -8,17 +8,11 @@
 </head>
 <body>
 <div id="vue-app">
-    <h1>Events</h1>
-    <button v-on:click="add(1)">涨一岁</button>
-    <button v-on:click="subtract(1)">减一岁</button>
-    <button v-on:dblclick="add(10)">涨十岁</button>
-    <button v-on:dblclick="subtract(10)">减十岁</button>
-    <p>My age is {{age}}</p>
-    <div id="canvas" v-on:mousemove="updateXY">{{x}},{{y}}
-    <span v-on:mousemove.stop="">Stop Moving
-    </span>
-    </div>
-    <a v-on:click.prevent="aler()" href="www.baidu.com">baidu</a>
+    <h1>键盘 Events</h1>
+    <label>姓名:</label>
+    <input type="text" v-on:keyup.enter="logName">
+    <label>年龄:</label>
+    <input type="text" v-on:keyup.enter="logAge">
 </div>
 <script src="app.js"></script>
 </body>
