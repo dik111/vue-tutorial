@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    Hello Vue.js
     <h1>{{title}}</h1>
     <users></users>
 
@@ -8,7 +7,6 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld'
 import Users from "./components/Users";
 
 export default {
@@ -24,6 +22,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  h1{
+    color: purple;
+  }
 
 </style>
