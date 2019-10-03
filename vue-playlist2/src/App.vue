@@ -1,9 +1,10 @@
 <template>
   <div id="app">
 <!--    <h1>{{title}}</h1>-->
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
     <users v-bind:users="users"></users>
-    <app-footer></app-footer>
+    <users v-bind:users="users"></users>
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 
@@ -26,7 +27,8 @@ export default {
               {name:"Henry",position:"Web开发",show:false},
               {name:"Henry",position:"Web开发",show:false},
               {name:"Henry",position:"Web开发",show:false},
-          ]
+          ],
+          title:"传递的是一个值,(number string boolean)"
       }
   },
     components:{
