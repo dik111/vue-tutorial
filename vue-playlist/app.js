@@ -1,28 +1,17 @@
-//实例化vue对象
-var one = new Vue({
-    el:"#vue-app-one",
-    data:{
-       title:"app one 的内容"
-    },
-    methods:{
-
-    },
-    computed:{
-
+Vue.component("greeting",{
+    template:'<p>{{name}}:dfasdfsdfsdfsdf</p>',
+    data:function () {
+        return {
+            name:"ll"
+        }
     }
+})
+
+//实例化vue对象
+new Vue({
+    el:"#vue-app-one"
 });
 
-var two = new Vue({
-    el:"#vue-app-two",
-    data:{
-        title:"app two 的内容"
-    },
-    methods:{
-        changeTitle:function () {
-            one.title = "已经改名了！"
-        }
-    },
-    computed:{
-
-    }
+new Vue({
+    el:"#vue-app-two"
 });
