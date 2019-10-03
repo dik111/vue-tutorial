@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 <!--    <h1>{{title}}</h1>-->
-    <app-header v-bind:title="title"></app-header>
+    <app-header v-on:titleChange="updateTitle($event)" v-bind:title="title"></app-header>
     <users v-bind:users="users"></users>
     <users v-bind:users="users"></users>
     <app-footer v-bind:title="title"></app-footer>
@@ -30,7 +30,14 @@ export default {
           ],
           title:"传递的是一个值,(number string boolean)"
       }
+
   },
+    methods:{
+      updateTitle(title){
+          this.title=title;
+      }
+
+    },
     components:{
       "users":Users,
         "app-header":Header,

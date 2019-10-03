@@ -19,7 +19,8 @@
         },
         methods:{
             changeTitle:function () {
-                this.title="changed";
+                // this.title="changed";
+                this.$emit("titleChange","子向父组建传值")
             }
         }
     }
