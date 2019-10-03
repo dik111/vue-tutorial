@@ -2,7 +2,7 @@
   <div id="app">
 <!--    <h1>{{title}}</h1>-->
     <app-header></app-header>
-    <users></users>
+    <users v-bind:users="users"></users>
     <app-footer></app-footer>
   </div>
 </template>
@@ -16,7 +16,17 @@ export default {
   name: 'App',
   data(){
       return{
-          title:"这个是我的第一个Vue脚手架项目！"
+          // title:"这个是我的第一个Vue脚手架项目！"
+          users:[
+              {name:"Henry",position:"Web开发",show:false},
+              {name:"Henry",position:"Web开发",show:false},
+              {name:"Henry",position:"Web开发",show:false},
+              {name:"Henry",position:"Web开发",show:false},
+              {name:"Henry",position:"Web开发",show:false},
+              {name:"Henry",position:"Web开发",show:false},
+              {name:"Henry",position:"Web开发",show:false},
+              {name:"Henry",position:"Web开发",show:false},
+          ]
       }
   },
     components:{
